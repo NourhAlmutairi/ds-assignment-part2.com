@@ -1,0 +1,218 @@
+/* CSS Code */
+:root {
+  --main-color: #506bed;
+  --secondary-color: #563b3b;
+  --text-color: #7B92AC;
+  --text-second-color: #c7bfbf;
+  --text-third-color: #000000;
+  --accent-color: #000000;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    min-height: 100vh;
+  }
+  
+  .search-area {
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+  }
+  
+  .search-elements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .title {
+    color: var(--text-color);
+    margin-bottom: 2em;
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .credits {
+    text-align: center;
+    color: var(--text-third-color);
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .info-result {
+    color: var(--text-second-color);
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+    font-weight: bold;
+    width: 90%;
+  }
+  
+  .explanation-result {
+    color: var(--text-color);
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .search-bar {
+    margin-bottom: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  .credit-link {
+    color: var(--text-third-color);
+    text-decoration: none;
+    border-bottom: none;
+  }
+  
+  .credit-link:visited {
+    color: var(--text-third-color);
+    text-decoration: none;
+    border-bottom: none;
+  }
+  
+  .date-input {
+    height: 2.5em;
+    width: 80%;
+    border: none;
+    color: var(--text-third-color);
+    font-weight: bold;
+    border-radius: 1em;
+    padding: 0px 1em;
+  }
+  
+  .submit-btn {
+    background-color: var(--accent-color);
+    border: none;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    color: var(--text-color);
+    cursor: pointer;
+  }
+  
+  .result-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    overflow-y: auto;
+    width: 80%;
+  }
+  
+  .lottie-astronaut {
+    height: 90%;
+  }
+  
+  .loading {
+    font-weight: bold;
+    color: var(--text-color);
+    font-size: 1.5em;
+    opacity: 0;
+  }
+  
+  .card {
+    background-color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5em 0em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+    width: 100%;
+  }
+  
+  .image-link {
+    text-align: center;
+  }
+  
+  .image {
+    width: 90%;
+    margin-bottom: 1em;
+  }
+  
+  @media (min-width: 1024px) {
+    .search-area {
+      width: 50%;
+      padding: 5% 10%;
+    }
+  
+    .result-area {
+      height: 400px;
+      width: 80%;
+    }
+  
+    .title {
+      font-size: 30px;
+    }
+  
+    .date-input {
+      font-size: 18px;
+    }
+  
+    .submit-btn {
+      font-size: 18px;
+    }
+  
+    .credits {
+      font-size: 16px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .search-area {
+      width: 50%;
+    }
+  
+    .result-area {
+        height: 400px;
+        width: 80%;
+      }
+  
+    .title {
+      font-size: 36px;
+    }
+  
+    .date-input {
+      font-size: 20px;
+    }
+  
+    .submit-btn {
+      font-size: 20px;
+    }
+  
+    .credits {
+      font-size: 18px;
+    }
+  }
+
+
+
+
+
+
+
+

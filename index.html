@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+ 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <style>
+      /* CSS Code */
+:root {
+  --main-color: #506bed;
+  --secondary-color: #563b3b;
+  --text-color: #7B92AC;
+  --text-second-color: #c7bfbf;
+  --text-third-color: #000000;
+  --accent-color: #000000;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    min-height: 100vh;
+  }
+  
+  .search-area {
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+  }
+  
+  .search-elements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .title {
+    color: var(--text-color);
+    margin-bottom: 2em;
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .credits {
+    text-align: center;
+    color: var(--text-third-color);
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .info-result {
+    color: var(--text-second-color);
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+    font-weight: bold;
+    width: 90%;
+  }
+  
+  .explanation-result {
+    color: var(--text-color);
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .search-bar {
+    margin-bottom: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  .credit-link {
+    color: var(--text-third-color);
+    text-decoration: none;
+    border-bottom: none;
+  }
+  
+  .credit-link:visited {
+    color: var(--text-third-color);
+    text-decoration: none;
+    border-bottom: none;
+  }
+  
+  .date-input {
+    height: 2.5em;
+    width: 80%;
+    border: none;
+    color: var(--text-third-color);
+    font-weight: bold;
+    border-radius: 1em;
+    padding: 0px 1em;
+  }
+  
+  .submit-btn {
+    background-color: var(--accent-color);
+    border: none;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    color: var(--text-color);
+    cursor: pointer;
+  }
+  
+  .result-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    overflow-y: auto;
+    width: 80%;
+  }
+  
+  .lottie-astronaut {
+    height: 90%;
+  }
+  
+  .loading {
+    font-weight: bold;
+    color: var(--text-color);
+    font-size: 1.5em;
+    opacity: 0;
+  }
+  
+  .card {
+    background-color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5em 0em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+    width: 100%;
+  }
+  
+  .image-link {
+    text-align: center;
+  }
+  
+  .image {
+    width: 90%;
+    margin-bottom: 1em;
+  }
+  
+  @media (min-width: 1024px) {
+    .search-area {
+      width: 50%;
+      padding: 5% 10%;
+    }
+  
+    .result-area {
+      height: 400px;
+      width: 80%;
+    }
+  
+    .title {
+      font-size: 30px;
+    }
+  
+    .date-input {
+      font-size: 18px;
+    }
+  
+    .submit-btn {
+      font-size: 18px;
+    }
+  
+    .credits {
+      font-size: 16px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .search-area {
+      width: 50%;
+    }
+  
+    .result-area {
+        height: 400px;
+        width: 80%;
+      }
+  
+    .title {
+      font-size: 36px;
+    }
+  
+    .date-input {
+      font-size: 20px;
+    }
+  
+    .submit-btn {
+      font-size: 20px;
+    }
+  
+    .credits {
+      font-size: 18px;
+    }
+  }
+        /* Additional custom styles */
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F2F2F2;
+        }
+
+        .search-area {
+            background-color: #E0EAF0;
+            padding: 2em;
+            text-align: center;
+            border-radius: 1em;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: 2em auto;
+            max-width: 500px;
+        }
+
+        .title {
+            color: #333333;
+            font-size: 2.5em;
+            margin-bottom: 1em;
+            line-height: 1.2;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1em;
+        }
+
+        .date-input {
+            height: 2.5em;
+            width: 15em;
+            padding: 0.5em;
+            border: 1px solid #D1DCE5;
+            border-radius: 0.5em;
+            outline: none;
+            font-size: 1em;
+            color: #333333;
+        }
+
+        .submit-btn {
+            background-color: #9BAEC8;
+            border: none;
+            width: 3em;
+            height: 2.5em;
+            border-radius: 0 0.5em 0.5em 0;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #7B92AC;
+        }
+
+        .credits {
+            text-align: center;
+            color: #777777;
+            font-size: 0.9em;
+            margin-top: 2em;
+        }
+
+        .credit-link {
+            color: #9BAEC8;
+            text-decoration: none;
+            border-bottom: none;
+        }
+
+        .credit-link:hover {
+            text-decoration: underline;
+        }
+
+        .result-area {
+            background-color: #D1DCE5;
+            padding: 2em;
+            text-align: center;
+            border-radius: 1em;
+            margin-top: 2em;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .lottie-astronaut {
+            max-width: 80%;
+            height: auto;
+            margin-bottom: 2em;
+        }
+
+        .loading {
+            color: #333333;
+            font-size: 1.5em;
+            opacity: 0;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2em;
+            }
+
+            .date-input {
+                font-size: 1em;
+                width: 100%;
+                margin-top: 1em;
+            }
+
+            .submit-btn {
+                font-size: 1em;
+                margin-top: 1em;
+            }
+
+            .lottie-astronaut {
+                max-width: 100%;
+            }
+        }
+    </style>
+    <title>APOD</title>
+</head>
+<body>
+    <section class="search-area">
+        <div class="search-elements">
+            <h1 class="title">
+                Hey! Something extraordinary happened out there.<br>
+                selsct a date.
+            </h1>
+            <div class="search-bar">
+                <input type="date" name="date" id="date" class="date-input" min="1995-06-16">
+                <button class="submit-btn" id="submit-btn" type="submit" onclick="searchDay()">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+        <p class="credits">
+            Website created by   <a href="https://github.com/GaboDotCodes" target="_blank" rel="noopener noreferrer" class="credit-link">GaboDotCodes</a><br>
+            Powered by   <a href="https://api.nasa.gov/" target="_blank" rel="noopener noreferrer" class="credit-link">NASA API</a>
+        </p>
+    </section>
+    <section class="result-area" id="result">
+        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_jm7mv1ib.json" background="transparent" speed="1" class="lottie-astronaut" loop autoplay></lottie-player>
+        <h2 class="loading" id="loading">Loading...</h2>
+    </section>
+    <script src="https://kit.fontawesome.com/89b0418ca1.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
